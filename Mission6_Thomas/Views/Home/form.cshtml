@@ -1,0 +1,57 @@
+@model Mission6_Thomas.Models.Application
+
+<div class="container mt-5">
+    <h1 class="text-center">Enter Movies Into the Collection</h1>
+    <div class="d-flex justify-content-center">
+        <form method="post" class="w-100" style="max-width: 600px;">
+            <div class="mb-3">
+                <label for="movieName" class="form-label">Movie Title</label>
+                <input class="form-control" id="movieName" name="movieName" type="text" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="movieCategory" class="form-label">Movie Category</label>
+                <input class="form-control" id="movieCategory" name="movieCategory" type="text" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="movieYear" class="form-label">Movie Year</label>
+                <input class="form-control" id="movieYear" name="movieYear" type="number" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="movieDirector" class="form-label">Movie Director</label>
+                <input class="form-control" id="movieDirector" name="movieDirector" type="text" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="movieRating" class="form-label">Movie Rating</label>
+                <select class="form-select" id="movieRating" name="movieRating" required>
+                    <option value="G">G</option>
+                    <option value="PG">PG</option>
+                    <option value="PG-13">PG-13</option>
+                    <option value="R">R</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="edited" class="form-label">Edited</label>
+                <input class="form-check-input" id="edited" name="edited" type="checkbox" />
+                <label for="edited" class="form-check-label">Yes</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="lentTo" class="form-label">Lent To</label>
+                <input class="form-control" id="lentTo" name="lentTo" type="text"  />
+            </div>
+
+            <div class="mb-3">
+                <label for="notes" class="form-label">Notes</label>
+                <input class="form-control" id="notes" name="notes" type="text"  />
+            </div>
+
+            <button class="button button-primary w-100 mb-5" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
