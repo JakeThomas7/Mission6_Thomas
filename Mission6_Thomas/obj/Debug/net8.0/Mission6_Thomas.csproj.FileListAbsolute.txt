@@ -130,3 +130,4 @@
 /Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/obj/Debug/net8.0/Mission6_Thomas.csproj.AssemblyReference.cache
 /Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/obj/Debug/net8.0/Mission6.AC1A437C.Up2Date
 /Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/bin/Debug/net8.0/tsconfig.json
+/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/obj/Debug/net8.0/Mission6_Thomas.sourcelink.json
