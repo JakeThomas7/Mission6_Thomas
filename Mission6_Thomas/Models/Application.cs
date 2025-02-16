@@ -4,6 +4,7 @@ namespace Mission6_Thomas.Models
 {
     public class Application
     {
+        // Movie information class which contains all values needed for a movie submission and the get / set methods
         [Key]
         [Required]
         public int MovieID { get; set; }
