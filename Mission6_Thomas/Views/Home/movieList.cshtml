@@ -1,0 +1,43 @@
+<!-- The type of information we are looking at is appolication -->
+@model List<Movie>
+<div class="container mt-5 mb-5">
+<table class="table table-bordered table-hover">
+    <thead class="fw-bold">
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Category</th>
+        <th>Director</th>
+        <th>Rating</th>
+        <th>Edited</th>
+        <th>Lent To</th>
+        <th>Copied To Plex</th>
+        <th>Notes</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var x in Model) {
+        <tr>
+            <td>@x.Title</td>
+            <td>@x.Year</td>
+            <td>@x.Category?.CategoryName</td>
+            <td>@x.Director</td>
+            <td>@x.Rating</td>
+            <td>@x.Edited</td>
+            <td>@x.LentTo</td>
+            <td>@x.CopiedToPlex</td>
+            <td>@x.Notes</td>
+            <td style="white-space: nowrap;">
+                <a class="btn btn-secondary" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </a>
+                <a class="btn btn-secondary" asp-controller="Home" asp-action="Delete" asp-route-id="@x.MovieId">
+                    <i class="fa-regular fa-trash-can"></i>
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

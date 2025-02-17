@@ -1,32 +1,44 @@
-@model Mission6_Thomas.Models.Application
+@model Mission6_Thomas.Models.Movie
 
 <div class="container mt-5">
     <h1 class="text-center">Enter Movies Into the Collection</h1>
     <div class="d-flex justify-content-center">
+
         <form method="post" class="w-100" style="max-width: 600px;">
-            <div class="mb-3">
-                <label for="movieName" class="form-label">Movie Title</label>
-                <input class="form-control" id="movieName" name="movieName" type="text" required />
-            </div>
+
+            <div asp-validation-summary="All"></div>
+            
+            <input type="hidden" asp-for="MovieId"/>
 
             <div class="mb-3">
-                <label for="movieCategory" class="form-label">Movie Category</label>
-                <input class="form-control" id="movieCategory" name="movieCategory" type="text" required />
+                <label for="movieName" class="form-label">Movie Title</label>
+                <input class="form-control" id="movieName" asp-for="Title" type="text"/>
             </div>
 
             <div class="mb-3">
                 <label for="movieYear" class="form-label">Movie Year</label>
-                <input class="form-control" id="movieYear" name="movieYear" type="number" required />
+                <input class="form-control" id="movieYear" asp-for="Year" type="number"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="categoryId" class="form-label">Movie Category</label>
+                <select class="form-select" id="categoryId" asp-for="CategoryId" type="text">
+                    <option value="">Select a Category</option>
+                    @foreach (Category c in ViewBag.Categories)
+                    {
+                        <option value="@c.CategoryId">@c.CategoryName</option>
+                    }
+                </select>
             </div>
 
             <div class="mb-3">
                 <label for="movieDirector" class="form-label">Movie Director</label>
-                <input class="form-control" id="movieDirector" name="movieDirector" type="text" required />
+                <input class="form-control" id="movieDirector" asp-for="Director" type="text"/>
             </div>
 
             <div class="mb-3">
                 <label for="movieRating" class="form-label">Movie Rating</label>
-                <select class="form-select" id="movieRating" name="movieRating" required>
+                <select class="form-select" id="movieRating" asp-for="Rating">
                     <option value="G">G</option>
                     <option value="PG">PG</option>
                     <option value="PG-13">PG-13</option>
@@ -35,19 +47,23 @@
             </div>
 
             <div class="mb-3">
-                <label for="edited" class="form-label">Edited</label>
-                <input class="form-check-input" id="edited" name="edited" type="checkbox" />
-                <label for="edited" class="form-check-label">Yes</label>
+                <label for="Edited" class="form-label">Edited</label>
+                <input class="form-check-input" id="Edited" asp-for="Edited" type="checkbox"/>
             </div>
 
             <div class="mb-3">
                 <label for="lentTo" class="form-label">Lent To</label>
-                <input class="form-control" id="lentTo" name="lentTo" type="text"  />
+                <input class="form-control" id="lentTo" asp-for="LentTo" type="text"/>
+            </div>
+
+            <div class="mb-3">
+                <label for="CopiedToPlex" class="form-label">Copied To Plex</label>
+                <input class="form-check-input" id="CopiedToPlex" asp-for="CopiedToPlex" type="checkbox"/>
             </div>
 
             <div class="mb-3">
                 <label for="notes" class="form-label">Notes</label>
-                <input class="form-control" id="notes" name="notes" type="text"  />
+                <input class="form-control" id="notes" asp-for="Notes" type="text"/>
             </div>
 
             <button class="button button-primary w-100 mb-5" type="submit">Submit</button>

@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets/images/JoelHiltonHeadshot.jpg"
     },
     {
+      "Id": "/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/wwwroot/images/movieImage.jpeg",
+      "PackagePath": "staticwebassets/images/movieImage.jpeg"
+    },
+    {
       "Id": "/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

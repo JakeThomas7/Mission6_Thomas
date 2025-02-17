@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mission6_Thomas.Models;
 
@@ -10,118 +11,112 @@ using Mission6_Thomas.Models;
 namespace Mission6_Thomas.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    partial class MovieContextModelSnapshot : ModelSnapshot
+    [Migration("20250217014722_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.12");
 
             modelBuilder.Entity("Mission6_Thomas.Models.Category", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("categoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("CategoryName")
+                    b.Property<string>("categoryName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("CategoryId");
+                    b.HasKey("categoryId");
 
                     b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
-                            CategoryId = 1,
-                            CategoryName = "Miscellaneous"
+                            categoryId = 1,
+                            categoryName = "Miscellaneous"
                         },
                         new
                         {
-                            CategoryId = 2,
-                            CategoryName = "Drama"
+                            categoryId = 2,
+                            categoryName = "Drama"
                         },
                         new
                         {
-                            CategoryId = 3,
-                            CategoryName = "Television"
+                            categoryId = 3,
+                            categoryName = "Television"
                         },
                         new
                         {
-                            CategoryId = 4,
-                            CategoryName = "Horror/Suspense"
+                            categoryId = 4,
+                            categoryName = "Horror/Suspense"
                         },
                         new
                         {
-                            CategoryId = 5,
-                            CategoryName = "Comedy"
+                            categoryId = 5,
+                            categoryName = "Comedy"
                         },
                         new
                         {
-                            CategoryId = 6,
-                            CategoryName = "Family"
+                            categoryId = 6,
+                            categoryName = "Family"
                         },
                         new
                         {
-                            CategoryId = 7,
-                            CategoryName = "Action/Adventure"
+                            categoryId = 7,
+                            categoryName = "Action/Adventure"
                         },
                         new
                         {
-                            CategoryId = 8,
-                            CategoryName = "VHS"
+                            categoryId = 8,
+                            categoryName = "VHS"
                         });
                 });
 
             modelBuilder.Entity("Mission6_Thomas.Models.Movie", b =>
                 {
-                    b.Property<int>("MovieId")
+                    b.Property<int>("MovieID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("CategoryId")
+                    b.Property<int>("categoryId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("CopiedToPlex")
+                    b.Property<bool?>("edited")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Director")
+                    b.Property<string>("lentTo")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Edited")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("LentTo")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Rating")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Title")
+                    b.Property<string>("movieCategory")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Year")
+                    b.Property<string>("movieDirector")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("movieName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("movieRating")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("movieYear")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("MovieId");
+                    b.Property<string>("notes")
+                        .HasColumnType("TEXT");
 
-                    b.HasIndex("CategoryId");
+                    b.HasKey("MovieID");
 
                     b.ToTable("Movies");
-                });
-
-            modelBuilder.Entity("Mission6_Thomas.Models.Movie", b =>
-                {
-                    b.HasOne("Mission6_Thomas.Models.Category", "Category")
-                        .WithMany()
-                        .HasForeignKey("CategoryId");
-
-                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

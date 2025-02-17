@@ -256,7 +256,7 @@ h1, h2, h3, h4 {
 
 /* Update the container for the sponsors section */
 .sponsors .container {
-  max-width: 1280px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -267,7 +267,7 @@ h1, h2, h3, h4 {
 /* Center the grid itself */
 .sponsors-grid {
   width: 100%;
-  max-width: 1000px; /* Adjust this value as needed */
+  max-width: 2000px; /* Adjust this value as needed */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -302,11 +302,11 @@ h1, h2, h3, h4 {
   background-image: linear-gradient(
           rgba(0, 0, 0, 0.5),
           rgba(0, 0, 0, 0.5)
-  ), url(../images/JoelHiltonHeadshot.jpg);
+  ), url(../images/movieImage.jpeg);
   background-position: center center;
   background-size: cover;
   color: white;
-  text-align: left;
+  text-align: right;
   position: relative;
   overflow: hidden;
 }
@@ -341,6 +341,18 @@ h1, h2, h3, h4 {
   display: flex;
   z-index: 1;  /* Ensures buttons are clickable */
   position: relative;  /* Ensures z-index works */
+}
+
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Container Styles */

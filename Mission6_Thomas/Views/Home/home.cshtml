@@ -1,13 +1,39 @@
 <!-- Hero Section -->
 <section class="hero" style="">
-    <div class="container">
+    <div class="container text-end w-100">
         <br><br>
-        <h1>The<br>Joel Hilton<br>Film Collection!</h1>
-        <div style="background-color: var(--primary); margin-top: 8px; width: 100px; height: 8px; margin-bottom: 10px; transform: scale(1, 1); visibility: visible;" data-width="10px" data-animate="yes" data-animation-delay="" data-color="accent-color" class="divider-small-border completed"></div>
-        <p>Learn More about Joel or Enter a new Movie into the collection</p>
-        <div class="hero-buttons">
-            <a href="/Home/getToKnow" class=" hero-buttons button button-primary">About Joel</a>
+        <h1 class="text-end">The<br>Joel Hilton<br>Film Collection!</h1>
+        <div style="background-color: var(--primary); margin-top: 8px; width: 100px; height: 8px; margin-bottom: 10px; transform: scale(1, 1); visibility: visible;" data-width="10px" data-animate="yes" data-animation-delay="" data-color="accent-color" class="divider-small-border completed text-end"></div>
+        <p class="text-end">Manage and Enter Movies into Joel's Movie Collection</p>
+        <div class="hero-buttons text-end">
+            <a href="/Home/movieList" class="hero-buttons button button-primary">Manage Collection</a>
             <a href="/Home/form" class="hero-buttons button button-outline">Enter a Movie</a>
+        </div>
+    </div>
+</section>
+<section class="features sponsors" style="background-color: var(--light-gray);">
+    <div class="container">
+        <div class="sponsors-grid d-flex justify-content-center">
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("form", "Home")')">
+                <i class="fa-solid fa-video lg"></i>
+                <h3>Enter Movies to Collection</h3>
+            </div>
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("movieList", "Home")')">
+                <i class="fa-solid fa-list-check lg"></i>
+                <h3>Manage Collection</h3>
+            </div>
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("index", "Home")')">
+                <i class="fa-solid fa-square-arrow-up-right lg"></i>
+                <h3>Navigation</h3>
+            </div>
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("home", "Home")')">
+                <i class="fa-solid fa-house lg"></i>
+                <h3>Home</h3>
+            </div>
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("getToKnow", "Home")')">
+                <i class="fa-solid fa-user lg"></i>
+                <h3>Get to Know Joe</h3>
+            </div>
         </div>
     </div>
 </section>

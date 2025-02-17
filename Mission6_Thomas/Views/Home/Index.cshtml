@@ -1,8 +1,18 @@
 ﻿<section class="features sponsors" style="background-color: var(--light-gray);">
     <div class="container">
-        <div class="sponsors-grid">
+        <div class="sponsors-grid d-flex justify-content-center">
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("form", "Home")')">
+                <i class="fa-solid fa-video lg"></i>
+                <h3>Enter Movies to Collection</h3>
+            </div>
+            <div class="sponsor-item" onclick="redirectTo('@Url.Action("movieList", "Home")')">
+                <i class="fa-solid fa-list-check lg"></i>
+                <h3>Manage Collection</h3>
+            </div>
+        </div>
+        <div class="sponsors-grid d-flex justify-content-center">
             <div class="sponsor-item" onclick="redirectTo('@Url.Action("index", "Home")')">
-                <i class="fa-solid fa-bars lg"></i>
+                <i class="fa-solid fa-square-arrow-up-right lg"></i>
                 <h3>Navigation</h3>
             </div>
             <div class="sponsor-item" onclick="redirectTo('@Url.Action("home", "Home")')">
@@ -12,10 +22,6 @@
             <div class="sponsor-item" onclick="redirectTo('@Url.Action("getToKnow", "Home")')">
                 <i class="fa-solid fa-user lg"></i>
                 <h3>Get to Know Joe</h3>
-            </div>
-            <div class="sponsor-item" onclick="redirectTo('@Url.Action("form", "Home")')">
-                <i class="fa-solid fa-video lg"></i>
-                <h3>Enter Movies to Collection</h3>
             </div>
         </div>
     </div>

@@ -33,6 +33,6 @@ app.UseAuthorization();
 // Configures the default route pattern for the app's controllers. If no controller or action is provided, it defaults to Home/Index.
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=home}/{id?}");
 
 app.Run(); // Runs the application, starting the web server and processing requests.

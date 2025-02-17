@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PUfOLfvV9d0LVoBMptxLfRS8iWPPNzjcnPQPxGbhCfY=",
+  "Hash": "8N2UAqlzToRDX9HwixmBmMISKsElY4MSKuqM8D6TqeM=",
   "Source": "Mission6_Thomas",
   "BasePath": "_content/Mission6_Thomas",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/JoelHiltonHeadshot.jpg"
+    },
+    {
+      "Identity": "/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/wwwroot/images/movieImage.jpeg",
+      "SourceId": "Mission6_Thomas",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/wwwroot/",
+      "BasePath": "_content/Mission6_Thomas",
+      "RelativePath": "images/movieImage.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/movieImage.jpeg"
     },
     {
       "Identity": "/Users/jacobthomas/Documents/byu_classes/winter_2025/IS413/Mission6_Thomas/Mission6_Thomas/wwwroot/js/site.js",

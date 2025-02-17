@@ -11,6 +11,23 @@ public class MovieContext : DbContext
         // The base constructor initializes the DbContext with the provided options.
 
     }
-    // DbSet representing the "Applications" table in the database. This will hold the application data.
-    public DbSet<Application> Applications { get; set; }
+    // DbSet representing the "Movies" table in the database. This will hold the application data.
+    public DbSet<Movie> Movies { get; set; }
+    // Entity Framework DbSet to represent the categories table in the database
+    public DbSet<Category> Categories { get; set; }
+    protected override void OnModelCreating(ModelBuilder modelBuilder) // Seed Data
+    {
+        modelBuilder.Entity<Category>().HasData(
+            // List to store predefined category data
+            new Category { CategoryId = 1, CategoryName = "Miscellaneous" },
+            new Category { CategoryId = 2, CategoryName = "Drama" },
+            new Category { CategoryId = 3, CategoryName = "Television" },
+            new Category { CategoryId = 4, CategoryName = "Horror/Suspense" },
+            new Category { CategoryId = 5, CategoryName = "Comedy" },
+            new Category { CategoryId = 6, CategoryName = "Family" },
+            new Category { CategoryId = 7, CategoryName = "Action/Adventure" },
+            new Category { CategoryId = 8, CategoryName = "VHS" }
+            
+        );
+    }
 }
