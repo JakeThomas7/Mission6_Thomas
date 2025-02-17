@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Mission6_Thomas.Models
 {
-    public class Application
+    public class Movie
     {
         // Movie information class which contains all values needed for a movie submission and the get / set methods
         [Key]

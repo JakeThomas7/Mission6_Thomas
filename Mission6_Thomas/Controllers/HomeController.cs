@@ -31,9 +31,9 @@ public class HomeController : Controller
     }
     // post for the form will submit a new movie to the database
     [HttpPost]
-    public IActionResult form(Application response)
+    public IActionResult form(Movie response)
     {
-        _context.Applications.Add(response);
+        _context.Movies.Add(response);
         _context.SaveChanges();
         return View("confirmation", response);
     }

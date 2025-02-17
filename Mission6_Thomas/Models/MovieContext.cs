@@ -12,5 +12,5 @@ public class MovieContext : DbContext
 
     }
     // DbSet representing the "Applications" table in the database. This will hold the application data.
-    public DbSet<Application> Applications { get; set; }
+    public DbSet<Movie> Movies { get; set; }
 }

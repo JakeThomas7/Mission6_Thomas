@@ -17,7 +17,7 @@ namespace Mission6_Thomas.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.12");
 
-            modelBuilder.Entity("Mission6_Thomas.Models.Application", b =>
+            modelBuilder.Entity("Mission6_Thomas.Models.Movie", b =>
                 {
                     b.Property<int>("MovieID")
                         .ValueGeneratedOnAdd()
@@ -53,7 +53,7 @@ namespace Mission6_Thomas.Migrations
 
                     b.HasKey("MovieID");
 
-                    b.ToTable("Applications");
+                    b.ToTable("Movies");
                 });
 #pragma warning restore 612, 618
         }

@@ -5,13 +5,13 @@
 namespace Mission6_Thomas.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class firstUpdatedDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Applications",
+                name: "Movies",
                 columns: table => new
                 {
                     MovieID = table.Column<int>(type: "INTEGER", nullable: false)
@@ -21,13 +21,13 @@ namespace Mission6_Thomas.Migrations
                     movieYear = table.Column<int>(type: "INTEGER", nullable: false),
                     movieDirector = table.Column<string>(type: "TEXT", nullable: false),
                     movieRating = table.Column<string>(type: "TEXT", nullable: false),
-                    notes = table.Column<string>(type: "TEXT", nullable: false),
-                    lentTo = table.Column<string>(type: "TEXT", nullable: false),
-                    edited = table.Column<bool>(type: "INTEGER", nullable: false)
+                    notes = table.Column<string>(type: "TEXT", nullable: true),
+                    lentTo = table.Column<string>(type: "TEXT", nullable: true),
+                    edited = table.Column<bool>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Applications", x => x.MovieID);
+                    table.PrimaryKey("PK_Movies", x => x.MovieID);
                 });
         }
 
@@ -35,7 +35,7 @@ namespace Mission6_Thomas.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Applications");
+                name: "Movies");
         }
     }
 }
